@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Gamepres : Presentation Gameified</title>
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="style/fonts/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="style/gamepres.css" type="text/css" charset="utf-8" />
+
+
+        <!-- FRAMEWORK -->
+        <script type="text/javascript" src="lib/jquery/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.tmpl.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.tmplPlus.js"></script>
+        <script type="text/javascript" src="lib/box2d/Box2dWeb-2.1.a.3.min.js"></script>
+
+        <!-- INPOOT -->
+        <link rel="stylesheet" href="lib/inpoot/styles/inpoot.css" type="text/css" charset="utf-8" />
+        <script type="text/javascript" src="lib/inpoot/dist/inpoot.dist.min.js"></script>
+
+        <!-- GAMEPRES -->
+        <script type="text/javascript" src="gamepres.js"></script>
+        <script type="text/javascript" src="gamepres.assetLoader.js"></script>
+        <script type="text/javascript" src="gamepres.levelObject.js"></script>
+        <script type="text/javascript" src="gamepres.levelLoader.js"></script>
+        <script type="text/javascript" src="gamepres.levelSelector.js"></script>
+        <script type="text/javascript" src="gamepres.graphics.js"></script>
+        <script type="text/javascript" src="gamepres.physics.js"></script>
+        <script type="text/javascript" src="gamepres.audio.js"></script>
+        <script type="text/javascript" src="gamepres.player.js"></script>
+        <script type="text/javascript" src="gamepres.stageSetup.js"></script>
+
+        <!-- LEVELS -->
+        <script type="text/javascript" src="levels/level_1.js"></script>
+        <script type="text/javascript" src="levels/level_2.js"></script>
+        <script type="text/javascript" src="levels/level_3.js"></script>
+        <script type="text/javascript" src="levels/level_4.js"></script>
+        <script type="text/javascript" src="levels/level_5.js"></script>
+
+        <!-- INITIALIZATION -->
+        <script>
+
+            $(document).ready(function(){
+                //wire up the inpoot menu
+                $('#inpoot-button').click(inpoot.openMenu);
+                gamepres.initialize('INPOOT presentation',$('#presentation'));
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <div id="presentation" class="title-screen">
+            <div class="presentation-intro">
+                <h1 class="itsame text-shadow-dark text-primary">OPEN THE SLIDES MENU TO BEGIN</h1>
+                <h1 class="itsame text-shadow-dark text-primary">PRESS <span class="text-emph">'ENTER'</span> IF USING A KEYBOARD</h1>
+            </div>
+        </div>
+        <button id="inpoot-button" class="css3button">Setup Key Mapping</button>
+    </body>
+</html>
